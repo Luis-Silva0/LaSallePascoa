@@ -11,8 +11,8 @@ const Rodape = () => {
             </div>
             <IconContext.Provider value={{ size: '30px', className:"icon" }}>
                 <div className="flex justify-center gap-2 flex-row py-[19px]">
-                    <Link href="https://www.facebook.com/PastoralLaSallePT?locale=pt_PT"> <FaFacebook /> </Link>
-                    <Link href="https://www.instagram.com/pastorallasallept/"> <FaInstagram /> </Link>
+                    <Link target="_blank" href="https://www.facebook.com/PastoralLaSallePT?locale=pt_PT"> <FaFacebook /> </Link>
+                    <Link target="_blank" href="https://www.instagram.com/pastorallasallept/"> <FaInstagram /> </Link>
                 </div>
             </IconContext.Provider>
             <div className="flex justify-center pb-[20px]">
