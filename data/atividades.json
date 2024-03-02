@@ -2,9 +2,27 @@
     "Atividades":[
         {
             "nome": "Apresentação",
-            "hora-inicial": "9:30",
-            "hora-final": "11:30",
+            "horaInicial": "9:30",
+            "horaFinal": "11:30",
             "data":"27/4/2024"
+        },
+        {
+            "nome": "Apresentação2",
+            "horaInicial": "10:30",
+            "horaFinal": "11:30",
+            "data":"27/4/2024"
+        },
+        {
+            "nome": "Apresentação3",
+            "horaInicial": "10:30",
+            "horaFinal": "11:30",
+            "data":"28/4/2024"
+        },
+        {
+            "nome": "Apresentação4",
+            "horaInicial": "10:30",
+            "horaFinal": "11:30",
+            "data":"29/4/2024"
         }
     ]
 }
