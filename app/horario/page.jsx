@@ -17,7 +17,21 @@ export default function Horario() {
 
     return (
         <div className="bg-white flex flex-col items-center w-full">
-            Ainda não é Páscoa
+            <div className="w-[65%] md:w-[70%] py-[50px]">
+                <h1 className="flex text-[#015450] text-6xl font-work-sans md:justify-normal justify-center"> Schedule </h1>
+            </div>
+            <div className="w-[80%] md:w-[65%] flex flex-col gap-8">
+                {datas.map((data,index) => (
+                    <div className="flex flex-col gap-1.5">
+                        <h2 className="text-[#015450] font-work-sans"> {dia}, {data} </h2>
+                        <div className="flex flex-col gap-3" key={index}>
+                            {atividadesPorDia(data).map((atividade,i) => (
+                                <Schedule key={i} ativ={atividade}/>
+                            ))}
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
