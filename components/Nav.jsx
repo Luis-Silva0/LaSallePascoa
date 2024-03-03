@@ -14,9 +14,9 @@ const Nav = () => {
         <div className="mt-[25px] h-10 bg-[#f7f7f7] text-black flex justify-center">
           <div className="flex flex-row justify-between items-center font-proxima font-thin text-black">
             <Link className="px-2.5" href="/"> Home </Link>
-            <Link className="px-2.5" href="/clicktopray"> Click to Pray </Link>
+            <Link className="px-2.5" href="/horario"> Click to Pray </Link>
             <Link className="px-2.5" href="/horario"> Horário </Link>
-            <Link className="px-2.5" href="/musicas"> Músicas </Link>
+            <Link className="px-2.5" href="/horario"> Músicas </Link>
           </div>
         </div>
       </div>
