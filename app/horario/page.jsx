@@ -1,23 +1,15 @@
 "use client";
-import activities from "/data/atividades";
-import Schedule from "./Schedule";
-import { useState } from "react";
 
-const atividades = activities;
-
-export default function Horario() {
-    const datas = ["27/4","28/4","29/4"];
-    const [dia,setDia] = useState("Quinta-Feira");
-
-    const atividadesPorDia = (date) => {
-        const atividadesDoDia = atividades.filter((activ) => activ.data === date);
-        console.log(atividadesDoDia);
-        return atividadesDoDia ? atividadesDoDia.sort((a,b) => a.horaInicial - b.horaInicial) : [];
-    };
+export default function Placeholder() {
+    const date = new Date();
+    const countdown = 27 - date.getDate();
 
     return (
-        <div className="bg-white flex flex-col items-center w-full">
-            Ainda não é Páscoa
+        <div className="bg-[#015450] flex flex-col items-center w-full h-[50%] justify-between px-4 gap-10 items-center gap">
+            <div></div>
+            <span className="text-4xl"> Ainda não começou a Páscoa Jovem </span>
+            <span className="text-4xl"> Inscreve-te e volta daqui a {countdown} dias. </span>
+            <div></div>
         </div>
     );
 }
