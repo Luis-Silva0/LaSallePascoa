@@ -1,11 +1,12 @@
 "use client"
+import Image from "next/image";
 
 export default function Home() {
   return (
     <main className="bg-white">
-      <div className="h-[510px] bg-[#f7f7f7] w-full overflow-hidden flex">
-        <div className="flex grow bg-no-repeat bg-[url('/Pascoa.webp')] flex bg-top justify-center items-center">
-          <span className="bg-[#c7c7c7] text-[52px] font-work-sans italic px-3"> "Dou graças a Deus por vós" </span>
+      <div className="bg-[#f7f7f7] w-[1000px] md:w-full overflow-hidden flex">
+        <div className="flex grow items-center relative object-cover overflow-hidden md:h-[700px]">
+          <Image src={"/Pascoacartaz.jpg"} width={3200} height={1800} className="object-center -ml-[280px] md:m-0"/>
         </div>
       </div>
     </main>
