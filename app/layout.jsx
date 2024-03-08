@@ -18,7 +18,7 @@ export default function RootLayout ({children}) {
         sizes="192x192"
       />
       </head>
-      <body className="h-screen flex flex-col">
+      <body className="h-screen md:h-auto flex flex-col">
         <Nav />
         {children}
         <Rodape />
