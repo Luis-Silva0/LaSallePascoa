@@ -7,7 +7,7 @@ const Rodape = () => {
     return(
         <div className="bg-white flex flex-col grow w-full justify-end">
             <div className="flex justify-center">
-               <span className="text-[#015450] pt-[45px] font-semibold text-[22px] font-work-sans"> pascoajovem2024 </span> 
+               <span className="text-[#ee7f34] pt-[45px] font-semibold text-[22px] font-work-sans"> pascoajovem2024 </span> 
             </div>
             <IconContext.Provider value={{ size: '30px', className:"icon" }}>
                 <div className="flex justify-center gap-2 flex-row py-[19px]">
@@ -16,7 +16,7 @@ const Rodape = () => {
                 </div>
             </IconContext.Provider>
             <div className="flex justify-center pb-[20px]">
-                <span className="text-[#015450]"> Feito pelo grupo Dois Terços </span>
+                <span className="text-[#ee7f34]"> Feito pelo grupo Dois Terços </span>
             </div>
         </div>
     );
