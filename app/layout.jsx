@@ -3,7 +3,7 @@ import Nav from "/components/Nav";
 import Rodape from "/components/Rodape";
 
 export const metadata = {
-  title: "La Salle - Páscoa Jovem 2024",
+  title: "Páscoa Jovem 2024",
   description: "Página web da Páscoa Jovem 2024",
 };
 
@@ -18,9 +18,9 @@ export default function RootLayout ({children}) {
         sizes="192x192"
       />
       </head>
-      <body className="h-screen md:h-auto flex flex-col">
+      <body className="h-screen md:h-screen flex flex-col">
         <Nav />
-        {children}
+        <main className="bg-white"> {children} </main>
         <Rodape />
       </body>
     </html>

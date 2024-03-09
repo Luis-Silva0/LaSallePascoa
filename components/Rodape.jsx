@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Rodape = () => {
     return(
-        <div className="bg-white flex flex-col grow w-full justify-end">
+        <div className="bg-white flex flex-col grow w-full">
             <div className="flex justify-center">
                <span className="text-[#ee7f34] pt-[45px] font-semibold text-[22px] font-work-sans"> pascoajovem2024 </span> 
             </div>
