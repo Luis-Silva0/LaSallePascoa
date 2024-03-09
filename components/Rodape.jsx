@@ -7,7 +7,7 @@ const Rodape = () => {
     return(
         <div className="bg-white flex flex-col grow w-full">
             <div className="flex justify-center">
-               <span className="text-[#ee7f34] pt-[45px] font-semibold text-[22px] font-work-sans"> Pascoa Jovem 2024 </span> 
+               <span className="text-[#ee7f34] pt-[45px] font-semibold text-[22px] font-work-sans"> Páscoa Jovem 2024 </span> 
             </div>
             <IconContext.Provider value={{ size: '30px', className:"icon" }}>
                 <div className="flex justify-center gap-2 flex-row py-[19px]">
