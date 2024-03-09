@@ -23,7 +23,7 @@ const Nav = () => {
         <div className="mt-[25px] h-10 bg-[#f7f7f7] text-black flex justify-center">
           <div className="flex flex-row justify-between items-center font-proxima font-thin text-black md:text-base text-sm">
             <Link className={n != 1 ? "px-1" : "text-[#ee7f34] px-1"} href="/clicktopray"> Click to Pray </Link>
-            <Link className={n != 0 ? "px-1" : "text-[#ee7f34] px-1"} href="/horario"> Horário </Link>
+            <Link className={n != 2 ? "px-1" : "text-[#ee7f34] px-1"} href="/horario"> Horário </Link>
             <Link className={n != 3 ? "px-1" : "text-[#ee7f34] px-1"} href="/musicas"> Músicas </Link>
             <Link className={n != 4 ? "px-1" : "text-[#ee7f34] px-1"} href="/grupos"> Grupos de Serviço </Link>
           </div>
