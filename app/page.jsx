@@ -38,9 +38,9 @@ export default function Home() {
   return (
     <main className="bg-white flex flex-col gap-0 w-full overflow-hidden md:oveflow-auto h-[60vh] md:h-auto items-center">
       <div className="bg-[#f7f7f7] w-full flex grow h-[100%] md:h-auto">
-        <div className="md:hidden flex grow items-center relative bg-cover overflow-visible bg-no-repeat bg-center bg-[url('/Pascoacartaz.png')]"></div>
+        <div className="md:hidden flex grow items-center relative bg-cover overflow-visible bg-no-repeat bg-center bg-[url('/Pascoacartaz.jpg')]"></div>
         <div className="md:flex hidden grow items-center relative overflow-visible">
-          <Image src={'/Pascoacartaz.png'} sizes="100vw" height={0} width={0} className="hidden md:flex w-full h-auto"/>
+          <Image src={'/Pascoacartaz.jpg'} sizes="100vw" height={0} width={0} className="hidden md:flex w-full h-auto"/>
         </div>
       </div>
       <div className="w-[90%] md:w-[80%] h-[40vh] overflow-hidden">
