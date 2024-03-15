@@ -4,7 +4,7 @@ import BackgroundVideo from "@/components/BackgroundVideo";
 
 export default function ClickToPray() {
     const date = new Date();
-    const countdown = 27 - date.getDate();
+    const countdown = 7 - date.getDate();
     
     return (countdown > 0) ? (
         <div>

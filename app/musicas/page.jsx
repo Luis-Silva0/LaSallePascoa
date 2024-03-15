@@ -1,10 +1,14 @@
 "use client";
 
 import BackgroundVideo from "@/components/BackgroundVideo";
+import Musica from "./Musica";
+import musics from "/data/musicas";
+
+const musicas = musics
 
 export default function Music() {
     const date = new Date();
-    const countdown = 27 - date.getDate();
+    const countdown = 7 - date.getDate();
     
     return (countdown > 0) ? (
         <div>
@@ -17,7 +21,12 @@ export default function Music() {
         </div>
     ) : (
         <div className="bg-white flex flex-col items-center w-full">
-            Olá
+            <h1 className="text-[#ee7f34] font-work-sans text-[38px]"> Músicas </h1>
+            <div className="grid grid-cols-3 gap-x-40 gap-y-6">
+                {musicas.map((musica,index) =>(
+                    <Musica key={index} music={musica}/>
+                ))}
+            </div>
         </div>
     );
 }
