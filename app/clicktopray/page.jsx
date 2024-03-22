@@ -15,7 +15,7 @@ export default function ClickToPray() {
     
     useEffect(() => {
         prayer.map((p,index) => {
-            if (p.dia == 23) setPray(p.oracao);
+            if (p.dia == day) setPray(p.oracao);
         })
     },[])  
 
