@@ -9,7 +9,7 @@ const atividades = activities;
 
 export default function Horario() {
     const date = new Date();
-    const countdown = 7 - date.getDate();
+    const countdown = 27 - date.getDate();
 
     const datas = ["27/4","28/4","29/4"];
     const [dia,setDia] = useState("Quinta-Feira");

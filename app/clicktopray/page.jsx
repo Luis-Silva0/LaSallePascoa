@@ -9,7 +9,7 @@ const prayer = prayers
 export default function ClickToPray() {
     const date = new Date();
     const day = date.getDate();
-    const countdown = 7 - day;
+    const countdown = 27 - day;
     const [pray,setPray] = useState("");
     console.log(day)
     
