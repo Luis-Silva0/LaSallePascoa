@@ -4,6 +4,7 @@ import Carousel, { consts } from '@itseasy21/react-elastic-carousel';
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 import { Button } from "@nextui-org/react";
 import { IconContext } from "react-icons";
+import BackgroundVideo from "@/components/BackgroundVideo";
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 550, itemsToShow: 3, itemsToScroll: 1 },
