@@ -7,7 +7,7 @@ const grupos = [["Luis","Pedro","Inês","Raquel","Sara","Joel"],["Luis","Pedro",
 
 export default function Groups() {
     const date = new Date();
-    const countdown = 27 - date.getDate();
+    const countdown = 28 - date.getDate();
     
     return (countdown > 0) ? (
         <div>

@@ -8,7 +8,7 @@ const musicas = musics
 
 export default function Music() {
     const date = new Date();
-    const countdown = 27 - date.getDate();
+    const countdown = 28 - date.getDate();
     
     return (countdown > 0) ? (
         <div>

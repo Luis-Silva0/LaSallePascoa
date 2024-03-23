@@ -35,11 +35,12 @@ export default function Home() {
   const imageList = images.keys().map(image => images(image));
   const date = new Date();
   const day = date.getDate();
-  const countdown = 27 - day;
+  const countdown = 28 - day;
+  console.log(countdown)
 
   return (
-    <main className="bg-white flex flex-col gap-0 w-full overflow-hidden md:oveflow-auto h-[60vh] md:h-auto items-center">
-      {(countdown < 0) ?
+    <main className="bg-white flex flex-col gap-0 w-full overflow-hidden md:oveflow-auto h-[75vh] md:h-auto items-center">
+      {(countdown <= 0) ?
         <div className="bg-[#f7f7f7] w-full flex grow h-[100%] md:h-auto">
           <div className="md:hidden flex grow items-center relative bg-cover overflow-visible bg-no-repeat bg-center bg-[url('/Pascoacartaz.png')]"></div>
           <div className="md:flex hidden grow items-center relative overflow-visible">
@@ -65,7 +66,7 @@ export default function Home() {
           <span id="video-bottom"></span>
         </>
       }
-      <div className="w-[90%] md:w-[80%] h-[40vh]">
+      <div className="w-[90%] md:w-[80%] md:h-[40vh]">
         <Carousel breakPoints={breakPoints} itemsToShow={2} renderArrow={myArrow} itemPadding={[10,0]} pagination={false} className="outline-none h-[100%]">
           {imageList.map((imge,index) => (
             <div className="relative">
