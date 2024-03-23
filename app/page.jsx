@@ -38,7 +38,7 @@ export default function Home() {
   const countdown = 27 - day;
 
   return (
-    <main className="bg-white flex flex-col gap-0 w-full overflow-hidden md:oveflow-auto h-[60vh] md:h-auto items-center">
+    <main className="bg-white flex flex-col gap-0 w-full overflow-hidden md:oveflow-auto h-[75vh] md:h-auto items-center">
       {(countdown < 0) ?
         <div className="bg-[#f7f7f7] w-full flex grow h-[100%] md:h-auto">
           <div className="md:hidden flex grow items-center relative bg-cover overflow-visible bg-no-repeat bg-center bg-[url('/Pascoacartaz.png')]"></div>
