@@ -36,7 +36,6 @@ export default function Home() {
   const date = new Date();
   const day = date.getDate();
   const countdown = 28 - day;
-  console.log(countdown)
 
   return (
     <main className="bg-white flex flex-col gap-0 w-full overflow-hidden md:oveflow-auto h-[75vh] md:h-auto items-center">
