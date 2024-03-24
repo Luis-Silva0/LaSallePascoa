@@ -37,9 +37,9 @@ export default function ClickToPray() {
         </div>
     ) : (
         <div className="bg-[#ee7f34] min-h-[60vh] flex justify-center">
-            <div className="bg-[#ee7f34] flex flex-col w-[60%] justify-between gap-[60px]">
-                <h1 className="pt-[35px] font-bold text-5xl font-work-sans"> Com Jesus pela manhã </h1>
-                <div className="pt-[20px] flex flex-col justify-start font-work-sans text-[34px] leading-[2.75rem] gap-3">
+            <div className="bg-[#ee7f34] flex flex-col w-[80%] md:w-[60%] justify-between gap-[60px]">
+                <h1 className="pt-[35px] font-bold text-3xl md:text-5xl font-work-sans"> Com Jesus pela manhã </h1>
+                <div className="pt-[20px] flex flex-col justify-start font-work-sans text-2xl md:text-[34px] leading-[2.75rem] gap-3">
                     <NewlineText text={pray} />
                 </div>
                 <div className="pb-[45px] flex justify-start font-work-sans text-xl">
