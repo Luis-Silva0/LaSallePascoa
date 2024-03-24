@@ -26,7 +26,7 @@ export default function ClickToPray() {
         })
     },[])  
 
-    return (countdown >= 4) ? (
+    return (countdown > 4) ? (
         <div>
             <BackgroundVideo blur={2}>
                 <div className="flex flex-col items-center text-white w-full justify-between px-4 gap-10 items-center gap z-40">
