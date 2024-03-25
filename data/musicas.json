@@ -1,26 +1,22 @@
 [
     {
         "url":"/Pascoacartaz.png",
+        "ativ":"Ceia do Senhor"
+    },
+    {
+        "url":"/Pascoacartaz.png",
         "ativ":"Getsémani"
     },
     {
         "url":"/Pascoacartaz.png",
-        "ativ":"G"
+        "ativ":"Celebração penitecial"
     },
     {
         "url":"/Pascoacartaz.png",
-        "ativ":"sémani"
+        "ativ":"Oração junto à Cruz"
     },
     {
         "url":"/Pascoacartaz.png",
-        "ativ":"Getni"
-    },
-    {
-        "url":"/Pascoacartaz.png",
-        "ativ":"Getani"
-    },
-    {
-        "url":"/Pascoacartaz.png",
-        "ativ":"Getséma"
+        "ativ":"Vigília Pascal"
     }
 ]

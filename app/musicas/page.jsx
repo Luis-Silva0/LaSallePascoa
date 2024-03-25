@@ -8,8 +8,14 @@ const musicas = musics
 
 export default function Music() {
     const date = new Date();
-    const countdown = 28 - date.getDate();
-    
+    const countdown = 8 - date.getDate();
+    var musicA = [];
+
+    while (musicas.length > 0){
+        musicA.push(musicas.splice(0,3));
+    }
+    console.log(musicA)
+
     return (countdown > 0) ? (
         <div>
             <BackgroundVideo blur={2}>
@@ -22,9 +28,13 @@ export default function Music() {
     ) : (
         <div className="bg-white flex flex-col items-center w-full">
             <h1 className="text-[#ee7f34] font-work-sans text-[38px]"> Músicas </h1>
-            <div className="grid grid-cols-3 gap-x-40 gap-y-6">
-                {musicas.map((musica,index) =>(
-                    <Musica key={index} music={musica}/>
+            <div className="flex flex-col w-full h-[30vh]">
+                {musicA.map((arr,index) =>(
+                    <div key={index} className="flex w-full">
+                        {arr.map((musica,iex) =>(
+                            <Musica key={iex} music={musica}/>
+                        ))}
+                    </div>
                 ))}
             </div>
         </div>
