@@ -8,7 +8,7 @@ const musicas = musics
 
 export default function Music() {
     const date = new Date();
-    const countdown = 28 - date.getDate();
+    const countdown = 8 - date.getDate();
     const dias = (countdown == 1) ? "dia" : "dias";
 
     return (countdown > 0) ? (
@@ -23,7 +23,7 @@ export default function Music() {
     ) : (
         <div className="bg-white flex flex-col items-center w-full gap-16 mt-8">
             <h1 className="text-[#ee7f34] font-work-sans text-6xl"> Músicas </h1>
-            <div className="flex flex-row gap-16 flex-wrap w-[80%] md:w-[50%] justify-evenly">
+            <div className="flex flex-row gap-16 flex-wrap w-[80%] md:w-[50%] justify-evenly items-start">
                 {musicas.map((m,index) => (
                     <Musica key={index} music={m}/>
                 ))}

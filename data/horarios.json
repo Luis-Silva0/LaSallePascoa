@@ -1,0 +1,56 @@
+[
+    {
+        "dia":"Quinta-feira",
+        "ativ":[
+            {
+                "hora":"12:30",
+                "nome":"Acolhimento"
+            },{
+                "hora":"13:00",
+                "nome":"Almoço Partilhado"
+            },{
+                "hora":"14:30",
+                "nome":"Apresentação da Páscoa"
+            },{
+                "hora":"16:00",
+                "nome":"Apresentação do Lema"
+            },{
+                "hora":"16:45",
+                "nome":"Descanso e Lanche"
+            },{
+                "hora":"17:15",
+                "nome":"Ensaio"
+            },{
+                "hora":"17:30",
+                "nome":"Catequese"
+            },{
+                "hora":"18:30",
+                "nome":"Ceia do Senhor"
+            },{
+                "hora":"20:00",
+                "nome":"Jantar "
+            },{
+                "hora":"20:15",
+                "nome":"Getsémani"
+            }
+        ]
+    },
+    {
+        "dia":"Sexta-Feira",
+        "ativ":[
+            {
+                "hora":"19:30",
+                "nome":"teste2"
+            }
+        ]
+    },
+    {
+        "dia":"Sábado",
+        "ativ":[
+            {
+                "hora":"19:30",
+                "nome":"teste3"
+            }
+        ]
+    }
+]

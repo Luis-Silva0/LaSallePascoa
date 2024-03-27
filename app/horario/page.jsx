@@ -1,25 +1,22 @@
 "use client";
 
 import BackgroundVideo from "@/components/BackgroundVideo";
-import activities from "/data/atividades";
-import Schedule from "./Schedule";
 import { useState } from "react";
+import { Button } from "@nextui-org/react";
+import horarios from "/data/horarios"
+import Schedule from "./Schedule"
 
-const atividades = activities;
+const schedules = horarios;
 
 export default function Horario() {
     const date = new Date();
-    const countdown = 28 - date.getDate();
+    const countdown = 8 - date.getDate();
     const dias = (countdown == 1) ? "dia" : "dias";
 
-    const datas = ["27/4","28/4","29/4"];
-    const [dia,setDia] = useState("Quinta-Feira");
+    const [dia,setDia] = useState("");
+    console.log(schedules)
 
-    const atividadesPorDia = (date) => {
-        const atividadesDoDia = atividades.filter((activ) => activ.data === date);
-        console.log(atividadesDoDia);
-        return atividadesDoDia ? atividadesDoDia.sort((a,b) => a.horaInicial - b.horaInicial) : [];
-    };
+
     
     return (countdown > 0) ? (
         <div>
@@ -33,17 +30,17 @@ export default function Horario() {
     ) : (
         <div className="bg-white flex flex-col items-center w-full">
             <div className="w-[65%] md:w-[70%] py-[50px]">
-                <h1 className="flex text-[#015450] text-6xl font-work-sans md:justify-normal justify-center"> Schedule </h1>
+                <h1 className="flex text-[#ee7f34] text-6xl font-work-sans  justify-center"> Horário </h1>
             </div>
-            <div className="w-[80%] md:w-[65%] flex flex-col gap-8">
-                {datas.map((data,index) => (
-                    <div className="flex flex-col gap-1.5">
-                        <h2 className="text-[#015450] font-work-sans"> {dia}, {data} </h2>
-                        <div className="flex flex-col gap-3" key={index}>
-                            {atividadesPorDia(data).map((atividade,i) => (
-                                <Schedule key={i} ativ={atividade}/>
-                            ))}
-                        </div>
+            <div className="flex justify-between w-[90%] md:w-[50%]">
+                <Button disableRipple={true} onClick={() => setDia("Quinta-feira")} className={dia != "Quinta-feira" ? "md:w-[25%] w-1/3 max-w-[240px] bg-[#ee7f34] py-2 text-base md:text-2xl font-work-sans border border-[#ee7f34] hover:bg-white hover:text-[#ee7f34] transition ease-in-out delay-150" : "md:w-[25%] w-1/3 max-w-[240px] bg-white border border-[#ee7f34] text-[#ee7f34] py-2 text-base md:text-2xl font-work-sans"}> Quinta-Feira </Button>
+                <Button disableRipple={true} onClick={() => setDia("Sexta-Feira")} className={dia != "Sexta-Feira" ? "md:w-[25%] w-1/3 max-w-[240px] bg-[#ee7f34] py-2 text-base md:text-2xl font-work-sans border border-[#ee7f34] hover:bg-white hover:text-[#ee7f34] transition ease-in-out delay-150" : "md:w-[25%] w-1/3 max-w-[240px] bg-white border border-[#ee7f34] text-[#ee7f34] py-2 text-base md:text-2xl font-work-sans"}> Sexta-Feira </Button>
+                <Button disableRipple={true} onClick={() => setDia("Sábado")} className={dia != "Sábado" ? "md:w-[25%] w-1/3 max-w-[240px] bg-[#ee7f34] py-2 text-base md:text-2xl font-work-sans border border-[#ee7f34] hover:bg-white hover:text-[#ee7f34] transition ease-in-out delay-150" : "md:w-[25%] w-1/3 max-w-[240px] bg-white border border-[#ee7f34] text-[#ee7f34] py-2 text-base md:text-2xl font-work-sans"}> Sábado </Button>
+            </div>
+            <div className="justify-between flex w-[90%] md:w-[50%]">
+                {schedules.map((schedule,index) => (
+                    <div key={index} className={(schedule.dia != dia) ? "opacity-0 md:w-[25%] w-1/3 max-w-[240px]" : "md:w-[25%] w-1/3 max-w-[240px] overflow-visible text-nowrap"}>
+                        <Schedule schedule={schedule}/>
                     </div>
                 ))}
             </div>
