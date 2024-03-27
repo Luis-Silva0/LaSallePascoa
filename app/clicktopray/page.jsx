@@ -2,9 +2,11 @@
 
 import BackgroundVideo from "@/components/BackgroundVideo";
 import prayers from "/data/pray"
+import easter from "/data/pray28-31"
 import { useEffect, useState } from "react";
 
 const prayer = prayers
+const braga = easter
 
 function NewlineText(props) {
     const text = props.text;
@@ -17,13 +19,19 @@ export default function ClickToPray() {
     const date = new Date();
     const day = date.getDate();
     const countdown = 28 - day;
+    const dias = (countdown == 1) ? "dia" : "dias";
     const [pray,setPray] = useState("");
     console.log(day)
     
     useEffect(() => {
-        prayer.map((p,index) => {
-            if (p.dia == day) setPray(p.oracao);
-        })
+        (countdown > 0) ? (prayer.map((p) => { if (p.dia == day) setPray(p.oracao)})
+        ):(braga.map((p) => {
+            const h = date.getHours();
+            if (p.dia == day){
+                if (h > 16) setPray(p.noite)
+                else setPray(p.manha)
+            }
+            }))
     },[])  
 
     return (countdown > 4) ? (
@@ -31,7 +39,7 @@ export default function ClickToPray() {
             <BackgroundVideo blur={2}>
                 <div className="flex flex-col items-center text-white w-full justify-between px-4 gap-10 items-center gap z-40">
                     <span className="text-6xl md:text-9xl z-40 font-work-sans"> Prepara-te... </span>
-                    <span className="text-4xl md:text-7xl z-40 font-work-sans"> Faltam apenas {countdown} dias </span>
+                    <span className="text-4xl md:text-7xl z-40 font-work-sans"> Faltam apenas {countdown} {dias} </span>
                 </div>
             </BackgroundVideo>
         </div>

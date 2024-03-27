@@ -8,13 +8,14 @@ const grupos = [["Luis","Pedro","Inês","Raquel","Sara","Joel"],["Luis","Pedro",
 export default function Groups() {
     const date = new Date();
     const countdown = 28 - date.getDate();
+    const dias = (countdown == 1) ? "dia" : "dias";
     
     return (countdown > 0) ? (
         <div>
             <BackgroundVideo blur={2}>
                 <div className="flex flex-col items-center text-white w-full justify-between px-4 gap-10 items-center gap z-40">
                     <span className="text-6xl md:text-9xl z-40 font-work-sans"> Prepara-te... </span>
-                    <span className="text-4xl md:text-7xl z-40 font-work-sans"> Faltam apenas {countdown} dias </span>
+                    <span className="text-4xl md:text-7xl z-40 font-work-sans"> Faltam apenas {countdown} {dias} </span>
                 </div>
             </BackgroundVideo>
         </div>
@@ -24,7 +25,7 @@ export default function Groups() {
                 <h1 className="text-[#ee7f34] font-work-sans text-[38px]"> Grupos de Serviço </h1>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {grupos.map((group,index) => (
-                        <div className="flex flex-col bg-[#808080] aspect-square 2xl:py-5 pt-3 2xl:px-5 px-4 gap-3 md:gap-1 2xl:gap-3">
+                        <div className="flex flex-col bg-[#ee7f34] aspect-square 2xl:py-5 pt-3 2xl:px-5 px-4 gap-3 md:gap-1 2xl:gap-3">
                             <p className="text-3xl font-bold font-work-sans"> Grupo {index + 1} </p>
                             <Grupo key={index} grupo={group}/>
                         </div>
