@@ -20,7 +20,7 @@ export default function RootLayout ({children}) {
       </head>
       <body className="h-screen md:h-screen flex flex-col">
         <Nav />
-        <main className="bg-white"> {children} </main>
+        <main className="bg-white text-white"> {children} </main>
         <Rodape />
       </body>
     </html>

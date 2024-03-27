@@ -36,6 +36,7 @@ export default function Home() {
   const date = new Date();
   const day = date.getDate();
   const countdown = 28 - day;
+  const dias = (countdown == 1) ? "dia" : "dias";
 
   return (
     <main className="bg-white flex flex-col gap-0 w-full overflow-hidden md:oveflow-auto h-[75vh] md:h-auto items-center">
@@ -51,7 +52,7 @@ export default function Home() {
           <div className='relative overflow-hidden w-full h-[60vh] md:h-[70vh] items-center flex'>
             <div className="flex flex-col items-center w-full justify-between px-4 gap-10 items-center gap z-40">
               <span className="text-6xl md:text-9xl z-40 font-work-sans"> Prepara-te... </span>
-              <span className="text-4xl md:text-7xl z-40 font-work-sans"> Faltam apenas {countdown} dias </span>
+              <span className="text-4xl md:text-7xl z-40 font-work-sans"> Faltam apenas {countdown} {dias} </span>
             </div>
             <video width={1080} height={1920} autoPlay="autoplay" loop="loop" muted id="video-id" className='z-0 top-0 absolute w-full flex md:hidden grow md:h-auto' >
               <source src={"/PascoaJovem2024(90º).mp4"} type="video/mp4" />
