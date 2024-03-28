@@ -17,11 +17,10 @@ export default function RootLayout ({children}) {
           type="image/png"
           sizes="192x192"
         />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="true"
-        />
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+        <link href="https://db.onlinewebfonts.com/c/55c4f556836775174bfac94178a3fe82?family=Proxima+N+W01+Reg" rel="stylesheet"/>
       </head>
       <body className="h-screen md:h-screen flex flex-col">
         <Nav />
