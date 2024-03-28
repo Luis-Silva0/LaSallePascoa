@@ -43,7 +43,7 @@ export default function Horario() {
             </div>
             <div className="justify-between flex w-[90%] md:w-[60%]">
                 {schedules.map((schedule,index) => (
-                    <div key={index} className={(schedule.dia != dia) ? "opacity-0 md:w-[25%] w-1/3 max-w-[240px]" : "md:w-[25%] w-1/3 max-w-[240px] overflow-visible text-nowrap"}>
+                    <div key={index} className={(schedule.dia != dia) ? "hidden md:opacity-0 md:w-[25%] w-1/3 max-w-[240px]" : "md:w-[25%] w-1/3 max-w-[240px] overflow-visible text-nowrap"}>
                         <Schedule schedule={schedule}/>
                     </div>
                 ))}
