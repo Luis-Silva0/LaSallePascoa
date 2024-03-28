@@ -1,0 +1,18 @@
+[
+    {
+        "dia":4,
+        "cartaz":"/Pascoacartaz.png"
+    },
+    {
+        "dia":5,
+        "cartaz":"/post/Sexta.png"
+    },
+    {
+        "dia":6,
+        "cartaz":"/post/Sabado.png"
+    },
+    {
+        "dia":0,
+        "cartaz":"/post/Domingo.png"
+    }
+]

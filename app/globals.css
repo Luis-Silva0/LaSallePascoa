@@ -32,10 +32,16 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-  .icon {
+  .icon-inactive {
     color: #808080;
   }
-  .icon:hover {
+  .icon-inactive:hover {
     color: #ee7f34;
+  }
+  .icon-active:hover {
+    color: #bd2410;
+  }
+  .icon-active {
+    color: #808080;
   }
 }
