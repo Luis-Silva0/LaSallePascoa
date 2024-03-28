@@ -1,7 +1,8 @@
 "use client"
 
 export default function Grupo(grupo){
-    const g = grupo.grupo
+    console.log(grupo)
+    const g = grupo.grupo.elementos
     return (
        <div className="px-2 flex flex-col justify-evenly grow gap-2">
         {g.map((person,index) => (

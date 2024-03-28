@@ -10,7 +10,7 @@ const Rodape = () => {
     const color = (cores.filter( cor => (cor.dia == dia)))[0];
     const cor = color.cor;
     const icon = (cor == "#bd2410") ? "icon-active" : "icon-inactive";
-    console.log(icon)
+    
     return(
         <div className="bg-white flex flex-col grow w-full">
             <div className="flex justify-center">

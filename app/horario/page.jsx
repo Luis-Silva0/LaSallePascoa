@@ -1,17 +1,14 @@
 "use client";
 
 import BackgroundVideo from "@/components/BackgroundVideo";
-import activities from "/data/atividades";
-import Schedule from "./Schedule";
 import { useState } from "react";
 import { Button } from "@nextui-org/react";
 import horarios from "/data/horarios"
 import Schedule from "./Schedule"
 import cores from "/data/cores"
 
-const atividades = activities;
-
 export default function Horario() {
+    const schedules = horarios;
     const date = new Date();
     const countdown = 28 - date.getDate();
     const dias = (countdown == 1) ? "dia" : "dias";

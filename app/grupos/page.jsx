@@ -5,7 +5,7 @@ import Grupo from "./Grupo"
 import group from "/data/grupos"
 import cores from "/data/cores"
 
-const grupos = [["Luis","Pedro","Inês","Raquel","Sara","Joel"],["Luis","Pedro","Inês","Raquel"],["Luis","Pedro","Inês","Raquel"],["Luis","Pedro","Inês","Raquel"],["Luis","Pedro","Inês","Raquel"],["Luis","Pedro","Inês","Raquel","Sara","Joel"]]
+const grupos = group
 
 export default function Groups() {
     const date = new Date();
@@ -29,7 +29,7 @@ export default function Groups() {
     ) : (
         <div className="bg-white w-full flex items-center justify-center">
             <div className="flex w-[75%] md:w-[65%] 2xl:w-[60%] mt-4 flex flex-col gap-5">
-                <h1 className={`text-[${cor}] font-work-sans text-[38px]`}> Grupos de Serviço </h1>
+                <h1 style={{color: cor}} className={` font-work-sans text-[38px]`}> Grupos de Serviço </h1>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {grupos.map((group,index) => (
                         <div style={{backgroundColor: cor}} className={`flex flex-col aspect-square 2xl:py-5 pt-3 2xl:px-5 px-4 gap-3 md:gap-1 2xl:gap-3`}>
