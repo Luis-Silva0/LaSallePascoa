@@ -47,7 +47,7 @@ export default function Home() {
     <main className="bg-white flex flex-col gap-0 w-full overflow-hidden md:oveflow-auto h-[75vh] md:h-auto items-center">
       {(countdown <= 0) ?
         <div className="bg-[#f7f7f7] w-full flex grow h-[100%] md:h-auto">
-          <div className="md:hidden flex grow items-center relative bg-cover overflow-visible bg-no-repeat bg-center bg-[url('/Pascoacartaz.png')]"></div>
+          <div style={{backgroundImage: post.cartaz}}className="md:hidden flex grow items-center relative bg-cover overflow-visible bg-no-repeat bg-center"></div>
           <div className="md:flex hidden grow items-center relative overflow-visible">
             <Image src={post.cartaz} sizes="100vw" height={0} width={0} className="hidden md:flex w-full h-auto"/>
           </div>
