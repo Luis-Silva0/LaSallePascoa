@@ -5,7 +5,6 @@ import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 import { Button } from "@nextui-org/react";
 import { IconContext } from "react-icons";
 import cartazes from "/data/cartaz";
-import cores from "/data/cores";
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 550, itemsToShow: 3, itemsToScroll: 1 },
@@ -43,8 +42,6 @@ export default function Home() {
   const faltas = (countdown == 1) ? "Falta" : "Faltam";
   const cartaz = cartazes.filter( cartaz => (cartaz.dia == dia));
   const post = cartaz[0];
-  const color = (cores.filter( cor => (cor.dia == dia)))[0];
-  const cor = color.cor;
 
   return (
     <main className="bg-white flex flex-col gap-0 w-full overflow-hidden md:oveflow-auto h-[75vh] md:h-auto items-center">

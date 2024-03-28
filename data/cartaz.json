@@ -1,18 +1,18 @@
 [
     {
         "dia":4,
-        "cartaz":"/Pascoacartaz.png"
+        "cartaz":"/Pascoacartaz.webp"
     },
     {
         "dia":5,
-        "cartaz":"/post/Sexta.png"
+        "cartaz":"/post/Sexta.webp"
     },
     {
         "dia":6,
-        "cartaz":"/post/Sabado.png"
+        "cartaz":"/post/Sabado.webp"
     },
     {
         "dia":0,
-        "cartaz":"/post/Domingo.png"
+        "cartaz":"/post/Domingo.webp"
     }
 ]
