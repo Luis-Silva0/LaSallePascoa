@@ -1,5 +1,5 @@
 "use client";
-import { FaFacebook, FaInstagram } from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaGithub } from "react-icons/fa6";
 import { IconContext } from "react-icons";
 import Link from "next/link";
 import cores from "/data/cores"
@@ -20,6 +20,7 @@ const Rodape = () => {
                 <div className="flex justify-center gap-2 flex-row py-[19px]">
                     <Link target="_blank" href="https://www.facebook.com/PastoralLaSallePT?locale=pt_PT"> <FaFacebook /> </Link>
                     <Link target="_blank" href="https://www.instagram.com/pastorallasallept/"> <FaInstagram /> </Link>
+                    <Link target="_blank" href="https://github.com/Luis-Silva0/LaSallePascoa"> <FaGithub /> </Link>
                 </div>
             </IconContext.Provider>
             <div className="flex justify-center pb-[20px]">
