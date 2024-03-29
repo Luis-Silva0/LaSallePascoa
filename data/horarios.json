@@ -43,11 +43,11 @@
                 "nome":"Acordar"
             },
             {
-                "hora":"09:00",
+                "hora":"08:30",
                 "nome":"Pequeno-Almoço"
             },
             {
-                "hora":"09:30",
+                "hora":"09:00",
                 "nome":"Ensaio"
             },
             {
@@ -100,15 +100,15 @@
         "dia":"Sábado",
         "ativ":[
             {
-                "hora":"08:30",
+                "hora":"08:15",
                 "nome":"Acordar"
             },
             {
-                "hora":"09:00",
+                "hora":"08:45",
                 "nome":"Laudes"
             },
             {
-                "hora":"09:30",
+                "hora":"09:15",
                 "nome":"Pequeno-Almoço"
             },
             {
