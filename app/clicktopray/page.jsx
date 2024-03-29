@@ -18,9 +18,9 @@ function NewlineText(props) {
 
 export default function ClickToPray() {
     const date = new Date();
-    const day = date.getDate();
-    const h = date.getHours();
-    const dia = date.getDay();
+    const day = date.getUTCDate();
+    const h = date.getUTCHours();
+    const dia = date.getUTCDay();
     const countdown = 28 - day;
     const dias = (countdown == 1) ? "dia" : "dias";
     const faltas = (countdown == 1) ? "Falta" : "Faltam";

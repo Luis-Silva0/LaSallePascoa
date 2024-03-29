@@ -10,10 +10,10 @@ import cores from "/data/cores"
 export default function Horario() {
     const schedules = horarios;
     const date = new Date();
-    const countdown = 28 - date.getDate();
+    const countdown = 28 - date.getUTCDate();
     const dias = (countdown == 1) ? "dia" : "dias";
     const faltas = (countdown == 1) ? "Falta" : "Faltam";
-    const day = date.getDay();
+    const day = date.getUTCDay();
     const [dia,setDia] = useState("");
     const color = (cores.filter( cor => (cor.dia == day)))[0];
     const cor = color.cor;

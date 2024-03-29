@@ -6,7 +6,7 @@ import cores from "/data/cores"
 
 const Rodape = () => {
     const date = new Date();
-    const dia = date.getDay();
+    const dia = date.getUTCDay();
     const color = (cores.filter( cor => (cor.dia == dia)))[0];
     const cor = color.cor;
     const icon = (cor == "#bd2410") ? "icon-active" : "icon-inactive";

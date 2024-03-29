@@ -7,7 +7,7 @@ export default function Musica(music){
     const date = new Date();
     const musica = music.music;
     const pdf = musica.pdf;
-    const dia = date.getDay();
+    const dia = date.getUTCDay();
     const color = (cores.filter( cor => (cor.dia == dia)))[0];
     const cor = color.cor;
     return (

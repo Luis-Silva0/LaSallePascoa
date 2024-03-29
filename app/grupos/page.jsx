@@ -9,8 +9,8 @@ const grupos = group
 
 export default function Groups() {
     const date = new Date();
-    const countdown = 28 - date.getDate();
-    const day = date.getDay();
+    const countdown = 28 - date.getUTCDate();
+    const day = date.getUTCDay();
     const dias = (countdown == 1) ? "dia" : "dias";
     const faltas = (countdown == 1) ? "Falta" : "Faltam";
     const color = (cores.filter( cor => (cor.dia == day)))[0];

@@ -4,7 +4,7 @@ import cores from "/data/cores"
 
 export default function Schedule({schedule}) {
     const date = new Date();
-    const dia = date.getDay();
+    const dia = date.getUTCDay();
     const color = (cores.filter( cor => (cor.dia == dia)))[0];
     const cor = color.cor;
     if (schedule) return(

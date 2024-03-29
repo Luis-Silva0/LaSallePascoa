@@ -6,7 +6,7 @@ import cores from "/data/cores"
 
 const Nav = () => {
   const date = new Date();
-  const dia = date.getDay();
+  const dia = date.getUTCDay();
   const path = usePathname()
   let n = 0
   if (path == "/musicas") n = 3
