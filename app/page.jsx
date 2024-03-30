@@ -42,6 +42,7 @@ export default function Home() {
   const faltas = (countdown == 1) ? "Falta" : "Faltam";
   const cartaz = cartazes.filter( cartaz => (cartaz.dia == dia));
   const post = cartaz[0];
+  console.log(post)
 
   return (
     <main className="bg-white flex flex-col gap-0 w-full overflow-hidden md:oveflow-auto h-[75vh] md:h-auto items-center">
