@@ -1,31 +1,31 @@
 [
     {
-        "url":"/music/images/Senhor.png",
+        "url":"/music-images/Senhor.webp",
         "ativ":"Ceia do Senhor",
         "pdf":"/music/Senhor.pdf"
     },
     {
-        "url":"/music/images/Getsémani.png",
+        "url":"/music-images/Getsémani.webp",
         "ativ":"Getsémani",
         "pdf":"/music/Getsémani.pdf"
     },
     {
-        "url":"/music/images/Penitecial.png",
-        "ativ":"Celebração penitecial",
+        "url":"/music-images/Penitecial.webp",
+        "ativ":"Celebração penitencial",
         "pdf":"/music/Penitecial.pdf"
     },
     {
-        "url":"/music/images/Cruz.png",
+        "url":"/music-images/Cruz.webp",
         "ativ":"Adoração da Cruz e Oração junto à Cruz",
         "pdf":"/music/Cruz.pdf"
     },
     {
-        "url":"/music/images/Laudes.jpg",
+        "url":"/music-images/Laudes.webp",
         "ativ":"Laudes",
         "pdf":"/music/Laudes.pdf"
     },
     {
-        "url":"/music/images/Vigília.png",
+        "url":"/music-images/Vigília.webp",
         "ativ":"Vigília Pascal",
         "pdf":"/music/Vigília.pdf"
     }

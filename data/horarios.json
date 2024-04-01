@@ -12,13 +12,13 @@
                 "hora":"14:30",
                 "nome":"Apresentação da Páscoa"
             },{
-                "hora":"16:00",
+                "hora":"15:00",
                 "nome":"Apresentação do Lema"
             },{
-                "hora":"16:45",
+                "hora":"16:30",
                 "nome":"Descanso e Lanche"
             },{
-                "hora":"17:15",
+                "hora":"17:00",
                 "nome":"Ensaio"
             },{
                 "hora":"17:30",
@@ -28,9 +28,9 @@
                 "nome":"Ceia do Senhor"
             },{
                 "hora":"20:00",
-                "nome":"Jantar "
+                "nome":"Jantar"
             },{
-                "hora":"20:15",
+                "hora":"21:45",
                 "nome":"Getsémani"
             }
         ]
@@ -39,8 +39,60 @@
         "dia":"Sexta-Feira",
         "ativ":[
             {
-                "hora":"19:30",
-                "nome":"teste2"
+                "hora":"08:30", 
+                "nome":"Acordar"
+            },
+            {
+                "hora":"08:30",
+                "nome":"Pequeno-Almoço"
+            },
+            {
+                "hora":"09:00",
+                "nome":"Ensaio"
+            },
+            {
+                "hora":"10:00",
+                "nome":"Catequese"
+            },
+            {
+                "hora":"11:00",
+                "nome":"Descanso"
+            },
+            {
+                "hora":"11:35",
+                "nome":"Celebração Penitencial"
+            },
+            {
+                "hora":"13:00",
+                "nome":"Almoço"
+            },
+            {
+                "hora":"14:30",
+                "nome":"Hora de Noa"
+            },
+            {
+                "hora":"15:15",
+                "nome":"Via Sacra"
+            },
+            {
+                "hora":"17:30",
+                "nome":"Descanso e Lanche"
+            },
+            {
+                "hora":"18:00",
+                "nome":"Ensaio"
+            },
+            {
+                "hora":"18:30",
+                "nome":"Adoração da Cruz"
+            },
+            {
+                "hora":"20:00",
+                "nome":"Jantar"
+            },
+            {
+                "hora":"21:45",
+                "nome":"Oração Junto à Cruz"
             }
         ]
     },
@@ -48,8 +100,64 @@
         "dia":"Sábado",
         "ativ":[
             {
-                "hora":"19:30",
-                "nome":"teste3"
+                "hora":"08:15",
+                "nome":"Acordar"
+            },
+            {
+                "hora":"08:45",
+                "nome":"Laudes"
+            },
+            {
+                "hora":"09:15",
+                "nome":"Pequeno-Almoço"
+            },
+            {
+                "hora":"10:15",
+                "nome":"Ensaio"
+            },
+            {
+                "hora":"10:45",
+                "nome":"Caminho de Emaús"
+            },
+            {
+                "hora":"13:00",
+                "nome":"Almoço"
+            },
+            {
+                "hora":"14:30",
+                "nome":"Ensaio"
+            },
+            {
+                "hora":"15:00",
+                "nome":"Testemunho"
+            },
+            {
+                "hora":"16:30",
+                "nome":"Descanso"
+            },
+            {
+                "hora":"17:00",
+                "nome":"Ambientação da Vigília"
+            },
+            {
+                "hora":"17:30",
+                "nome":"Preparação da Vigília"
+            },
+            {
+                "hora":"18:30",
+                "nome":"Descanso"
+            },
+            {
+                "hora":"19:00",
+                "nome":"Preparação da Vigília"
+            },
+            {
+                "hora":"20:00",
+                "nome":"Jantar"
+            },
+            {
+                "hora":"21:30",
+                "nome":"Vigília Pascal"
             }
         ]
     }

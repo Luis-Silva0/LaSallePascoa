@@ -4,6 +4,7 @@ import Carousel, { consts } from '@itseasy21/react-elastic-carousel';
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 import { Button } from "@nextui-org/react";
 import { IconContext } from "react-icons";
+import cartazes from "/data/cartaz";
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 550, itemsToShow: 3, itemsToScroll: 1 },
@@ -34,17 +35,22 @@ export default function Home() {
   const images = require.context('/public/images', true);
   const imageList = images.keys().map(image => images(image));
   const date = new Date();
-  const day = date.getDate();
+  const day = date.getUTCDate();
+  const dia = date.getUTCDay();
   const countdown = 28 - day;
   const dias = (countdown == 1) ? "dia" : "dias";
+  const faltas = (countdown == 1) ? "Falta" : "Faltam";
+  const cartaz = cartazes.filter( cartaz => (cartaz.dia == dia));
+  const post = cartaz[0];
+  console.log(post)
 
   return (
     <main className="bg-white flex flex-col gap-0 w-full overflow-hidden md:oveflow-auto h-[75vh] md:h-auto items-center">
       {(countdown <= 0) ?
         <div className="bg-[#f7f7f7] w-full flex grow h-[100%] md:h-auto">
-          <div className="md:hidden flex grow items-center relative bg-cover overflow-visible bg-no-repeat bg-center bg-[url('/Pascoacartaz.png')]"></div>
+          <div style={{backgroundImage: `url(${post.cartaz})`}}className="md:hidden flex grow items-center relative bg-cover overflow-visible bg-no-repeat bg-center"></div>
           <div className="md:flex hidden grow items-center relative overflow-visible">
-            <Image src={'/Pascoacartaz.png'} sizes="100vw" height={0} width={0} className="hidden md:flex w-full h-auto"/>
+            <Image src={post.cartaz} sizes="100vw" height={0} width={0} className="hidden md:flex w-full h-auto"/>
           </div>
         </div>
         :
@@ -52,7 +58,7 @@ export default function Home() {
           <div className='relative overflow-hidden w-full h-[60vh] md:h-[70vh] items-center flex'>
             <div className="flex flex-col items-center w-full justify-between px-4 gap-10 items-center gap z-40">
               <span className="text-6xl md:text-9xl z-40 font-work-sans"> Prepara-te... </span>
-              <span className="text-4xl md:text-7xl z-40 font-work-sans"> Faltam apenas {countdown} {dias} </span>
+              <span className="text-4xl md:text-7xl z-40 font-work-sans"> {faltas} apenas {countdown} {dias} </span>
             </div>
             <video width={1080} height={1920} autoPlay="autoplay" loop="loop" muted id="video-id" className='z-0 top-0 absolute w-full flex md:hidden grow md:h-auto' >
               <source src={"/PascoaJovem2024(90º).mp4"} type="video/mp4" />
