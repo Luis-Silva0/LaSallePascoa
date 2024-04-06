@@ -2,7 +2,8 @@
 
 import { Link } from "@nextui-org/react";
 import { usePathname } from "next/navigation";
-import cores from "/data/cores"
+import cores from "/data/cores";
+import { useEffect, useState } from "react";
 
 const Nav = () => {
   const date = new Date();
@@ -14,8 +15,19 @@ const Nav = () => {
   else if (path == "/clicktopray") n = 1
   else if (path == "/grupos") n = 4
   else n = 0
-  const color = (cores.filter( cor => (cor.dia == dia)))[0];
-  const cor = color.cor;
+  const [cor,setCor] = useState("");
+    const chooseColor = () => {
+        const color = (cores.filter( cor => (cor.dia == dia)))[0];
+        if(color === undefined) {
+            setCor("#ee7f34")
+        }
+        else {
+            setCor(color.cor)  
+        } 
+    }
+    useEffect(() => {
+        chooseColor();
+    },[])
 
     return (
       <div className="bg-white w-full flex flex-col outline-none">

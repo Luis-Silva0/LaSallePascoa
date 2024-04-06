@@ -1,12 +1,24 @@
 "use client";
 import cores from "/data/cores"
+import { useState, useEffect } from "react";
 
 
 export default function Schedule({schedule}) {
     const date = new Date();
     const dia = date.getUTCDay();
-    const color = (cores.filter( cor => (cor.dia == dia)))[0];
-    const cor = color.cor;
+    const [cor,setCor] = useState("");
+    const chooseColor = () => {
+        const color = (cores.filter( cor => (cor.dia == dia)))[0];
+        if(color === undefined) {
+            setCor("#ee7f34")
+        }
+        else {
+            setCor(color.cor)  
+        } 
+    }
+    useEffect(() => {
+        chooseColor();
+    },[])
     if (schedule) return(
         <div className="flex flex-col text-black font-work-sans justify-start pt-3 gap-3">
             {schedule.ativ.map((ativ,index) => (

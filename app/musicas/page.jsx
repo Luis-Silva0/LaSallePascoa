@@ -4,17 +4,29 @@ import BackgroundVideo from "@/components/BackgroundVideo";
 import Musica from "./Musica";
 import musics from "/data/musicas";
 import cores from "/data/cores"
+import { useEffect, useState } from "react";
 
 const musicas = musics
 
 export default function Music() {
     const date = new Date();
-    const countdown = 28 - date.getUTCDate();
+    const countdown = 1 - date.getUTCDate();
     const dia = date.getUTCDay();
     const dias = (countdown == 1) ? "dia" : "dias";
     const faltas = (countdown == 1) ? "Falta" : "Faltam";
-    const color = (cores.filter( cor => (cor.dia == dia)))[0];
-    const cor = color.cor;
+    const [cor,setCor] = useState("");
+    const chooseColor = () => {
+        const color = (cores.filter( cor => (cor.dia == dia)))[0];
+        if(color === undefined) {
+            setCor("#ee7f34")
+        }
+        else {
+            setCor(color.cor)  
+        } 
+    }
+    useEffect(() => {
+        chooseColor();
+    },[])
 
     return (countdown > 0) ? (
         <div>

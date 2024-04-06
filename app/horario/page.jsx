@@ -1,7 +1,7 @@
 "use client";
 
 import BackgroundVideo from "@/components/BackgroundVideo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@nextui-org/react";
 import horarios from "/data/horarios"
 import Schedule from "./Schedule"
@@ -10,13 +10,24 @@ import cores from "/data/cores"
 export default function Horario() {
     const schedules = horarios;
     const date = new Date();
-    const countdown = 28 - date.getUTCDate();
+    const countdown = 1 - date.getUTCDate();
     const dias = (countdown == 1) ? "dia" : "dias";
     const faltas = (countdown == 1) ? "Falta" : "Faltam";
     const day = date.getUTCDay();
     const [dia,setDia] = useState("");
-    const color = (cores.filter( cor => (cor.dia == day)))[0];
-    const cor = color.cor;
+    const [cor,setCor] = useState("");
+    const chooseColor = () => {
+        const color = (cores.filter( cor => (cor.dia == day)))[0];
+        if(color === undefined) {
+            setCor("#ee7f34")
+        }
+        else {
+            setCor(color.cor)  
+        } 
+    }
+    useEffect(() => {
+        chooseColor();
+    },[])
     const quinta = (dia == "Quinta-feira") ? {backgroundColor: 'white',borderColor:cor, color: cor } : {backgroundColor: cor,borderColor:cor}
     const sexta = (dia == "Sexta-Feira") ? {backgroundColor: 'white',borderColor:cor,color: cor } : {backgroundColor: cor,borderColor:cor}
     const sabado = (dia == "Sábado") ? {backgroundColor: 'white',borderColor:cor,color: cor } : {backgroundColor: cor,borderColor:cor}

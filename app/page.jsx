@@ -37,7 +37,7 @@ export default function Home() {
   const date = new Date();
   const day = date.getUTCDate();
   const dia = date.getUTCDay();
-  const countdown = 28 - day;
+  const countdown = 1 - day;
   const dias = (countdown == 1) ? "dia" : "dias";
   const faltas = (countdown == 1) ? "Falta" : "Faltam";
   const cartaz = cartazes.filter( cartaz => (cartaz.dia == dia));

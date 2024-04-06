@@ -4,17 +4,29 @@ import BackgroundVideo from "@/components/BackgroundVideo";
 import Grupo from "./Grupo"
 import group from "/data/grupos"
 import cores from "/data/cores"
+import { useEffect, useState } from "react";
 
 const grupos = group
 
 export default function Groups() {
     const date = new Date();
-    const countdown = 28 - date.getUTCDate();
+    const countdown = 1 - date.getUTCDate();
     const day = date.getUTCDay();
     const dias = (countdown == 1) ? "dia" : "dias";
     const faltas = (countdown == 1) ? "Falta" : "Faltam";
-    const color = (cores.filter( cor => (cor.dia == day)))[0];
-    const cor = color.cor;
+    const [cor,setCor] = useState("");
+    const chooseColor = () => {
+        const color = (cores.filter( cor => (cor.dia == day)))[0];
+        if(color === undefined) {
+            setCor("#ee7f34")
+        }
+        else {
+            setCor(color.cor)  
+        } 
+    }
+    useEffect(() => {
+        chooseColor();
+    },[])
     console.log(cor)
     
     return (countdown > 0) ? (

@@ -21,23 +21,40 @@ export default function ClickToPray() {
     const day = date.getUTCDate();
     const h = date.getUTCHours();
     const dia = date.getUTCDay();
-    const countdown = 28 - day;
+    let timep = (23-h)*3600000 + (59-date.getUTCMinutes())*60000 + (59-date.getUTCSeconds())*1000;
+    const countdown = 1 - day;
     const dias = (countdown == 1) ? "dia" : "dias";
     const faltas = (countdown == 1) ? "Falta" : "Faltam";
     const [pray,setPray] = useState("");
     const hora = (countdown > 0 || h <= 16) ? "manhã" : "noite";
-    const color = (cores.filter( cor => (cor.dia == dia)))[0];
-    const cor = color.cor;
+    const [cor,setCor] = useState("");
+    const chooseColor = () => {
+        const color = (cores.filter( cor => (cor.dia == dia)))[0];
+        if(color === undefined) {
+            setCor("#ee7f34")
+        }
+        else {
+            setCor(color.cor)  
+        } 
+    }
+    console.log(timep)
     
-    useEffect(() => {
+    
+    const setOracao = () => {
         (countdown > 0) ? (prayer.map((p) => { if (p.dia == day) setPray(p.oracao) && setHora("manhã")})
         ):(braga.map((p) => {
             if (p.dia == day){
-                if (h > 16) setPray(p.noite) && setHora("noite")
+                if (h > 12) setPray(p.noite) && setHora("noite")
                 else setPray(p.manha) && setHora("manhã")
             }
             }))
-    },[])  
+        timep = (12)*3600000;
+        setTimeout(setOracao,timep);
+    }
+    useEffect(() => {
+        chooseColor();
+        setOracao();
+    },[])
 
     return (countdown > 4) ? (
         <div>
