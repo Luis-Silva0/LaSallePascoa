@@ -1,0 +1,21 @@
+[
+    {
+        "grupo": "Judeia",
+        "elementos":["Paula Lopes","Pedro Rodrigues","Íris Ribeiro","Rodirgo Fernandes","Vasco Araújo","Nuno Pereira","Gonçalo Jardim","José Loureiro","Óscar Lerones"]
+    },{
+        "grupo": "Fenícia",
+        "elementos":["Luis Fernández","Rita Martins","Mafalda Queirós","Patrícia Faria","Margarida Pereira","Filipe Pereira","Diogo Campinho","Paulo Loureiro","","","","",""]
+    },{
+        "grupo": "Samaria",
+        "elementos":["Dani","Luis Silva","Delfim Alves","André Miranda","Adriano Gomes","Guilherme Miranda","Inês Pena","Roberta Meneses","","","","",""]
+    },{
+        "grupo": "Decápole",
+        "elementos":["António Coutinho","Maria Araújo","Tomás Linhares","Maria Torres","Maria Brito","Diogo Silva","Inês Domingues","João Silva","Joel"]
+    },{
+        "grupo": "Galileia",
+        "elementos":["Sofia Ribeiro","Raquel Veloso","Mafalda Oliveira","Diogo Fernandes","Carolina Gomes","Sofia Vilas Boas","Sofia Rodrigues","Alcides Longras","","","","",""]
+    },{
+        "grupo": "Pereia",
+        "elementos":["Inês Fernandes","Sara Neto","João Fernandes","Tiago Barroso","Rodrigo Araújo","Afonso Oliveira","Nuno Loureiro","Filipe Araújo","","","","",""]
+    }
+]
