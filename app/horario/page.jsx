@@ -9,9 +9,9 @@ const atividades = activities;
 
 export default function Horario() {
     const date = new Date();
-    const countdown = 27 - date.getDate();
+    const countdown = 18 - date.getDate();
 
-    const datas = ["27/4","28/4","29/4"];
+    const datas = ["18/4","19/4","20/4"];
     const [dia,setDia] = useState("Quinta-Feira");
 
     const atividadesPorDia = (date) => {
@@ -25,7 +25,7 @@ export default function Horario() {
             <BackgroundVideo blur={2}>
                 <div className="flex flex-col items-center text-white w-full justify-between px-4 gap-10 items-center gap z-40">
                     <span className="text-6xl md:text-9xl z-40 font-work-sans"> Prepara-te... </span>
-                    <span className="text-4xl md:text-7xl z-40 font-work-sans"> Faltam apenas {countdown} dias </span>
+                    <span className="text-4xl md:text-7xl z-40 font-work-sans"> Faltam apenas {countdown} {countdown == 1 ? "dia" : "dias"} </span>
                 </div>
             </BackgroundVideo>
         </div>

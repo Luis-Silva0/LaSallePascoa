@@ -2,15 +2,27 @@
 
 import { Link } from "@nextui-org/react";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const Nav = () => {
-  const path = usePathname()
-  let n = 0
-  if (path == "/musicas") n = 3
-  else if (path == "/horario") n = 2
-  else if (path == "/clicktopray") n = 1
-  else if (path == "/grupos") n = 4
-  else n = 0
+  const path = usePathname();
+  const[n, setN] = useState(0);
+
+  useEffect(() => {
+    if (path == "/") {
+      setN(0);
+    }
+    if (path == "/horario") {
+      setN(1);
+    }
+    if (path == "/musicas") {
+      setN(2);
+    }
+    if (path == "/grupos") {
+      setN(3);
+    }
+  }
+  , [path]);
 
     return (
       <div className="bg-white w-full flex flex-col">
@@ -22,10 +34,9 @@ const Nav = () => {
         </div>
         <div className="mt-[25px] h-10 bg-[#f7f7f7] text-black flex justify-center">
           <div className="flex flex-row justify-between items-center font-proxima font-thin text-black md:text-base text-sm">
-            <Link className={n != 1 ? "px-1" : "text-[#ee7f34] px-1"} href="/clicktopray"> Click to Pray </Link>
-            <Link className={n != 2 ? "px-1" : "text-[#ee7f34] px-1"} href="/horario"> Horário </Link>
-            <Link className={n != 3 ? "px-1" : "text-[#ee7f34] px-1"} href="/musicas"> Músicas </Link>
-            <Link className={n != 4 ? "px-1" : "text-[#ee7f34] px-1"} href="/grupos"> Grupos de Serviço </Link>
+            <Link className={n != 1 ? "px-1" : "text-[#ee7f34] px-1"} href="/horario"> Horário </Link>
+            <Link className={n != 2 ? "px-1" : "text-[#ee7f34] px-1"} href="/musicas"> Músicas </Link>
+            <Link className={n != 3 ? "px-1" : "text-[#ee7f34] px-1"} href="/grupos"> Grupos de Serviço </Link>
           </div>
         </div>
       </div>
