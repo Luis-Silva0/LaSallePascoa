@@ -39,10 +39,9 @@ const Nav = () => {
         </div>
         <div className="mt-[25px] h-10 bg-[#f7f7f7] text-black flex justify-center">
           <div className="flex flex-row justify-between items-center font-proxima font-thin text-black md:text-base text-sm">
-            <Link style={{color: (n==1) ? cor : 'black'}} className={n != 1 ? "px-1 md:px-2.5" : `px-1 md:px-2.5`} href="/clicktopray"> Click to Pray </Link>
-            <Link style={{color: (n==2) ? cor : 'black'}} className={n != 2 ? "px-1 md:px-2.5" : `px-1 md:px-2.5`} href="/horario"> Horário </Link>
-            <Link style={{color: (n==3) ? cor : 'black'}} className={n != 3 ? "px-1 md:px-2.5" : `px-1 md:px-2.5`} href="/musicas"> Músicas </Link>
-            <Link style={{color: (n==4) ? cor : 'black'}} className={n != 4 ? "px-1 md:px-2.5" : `px-1 md:px-2.5`} href="/grupos"> Grupos de Serviço </Link>
+            <Link style={{color: (n==1) ? cor : 'black'}} className={n != 2 ? "px-1 md:px-2.5" : `px-1 md:px-2.5`} href="/horario"> Horário </Link>
+            <Link style={{color: (n==2) ? cor : 'black'}} className={n != 3 ? "px-1 md:px-2.5" : `px-1 md:px-2.5`} href="/musicas"> Músicas </Link>
+            <Link style={{color: (n==3) ? cor : 'black'}} className={n != 4 ? "px-1 md:px-2.5" : `px-1 md:px-2.5`} href="/grupos"> Grupos de Serviço </Link>
           </div>
         </div>
       </div>
