@@ -2,19 +2,18 @@
 
 import BackgroundVideo from "@/components/BackgroundVideo";
 import Musica from "./Musica";
-import musics from "/data/musicas";
-import cores from "/data/cores"
 
-const musicas = musics
+const m = {
+    pdf: "/music/Músicas.pdf",
+    url: "/Pascoa25.jpg",
+    ativ: "Músicas",
+}
 
 export default function Music() {
     const date = new Date();
-    const countdown = 28 - date.getUTCDate();
-    const dia = date.getUTCDay();
+    const countdown = 17 - date.getDate();
     const dias = (countdown == 1) ? "dia" : "dias";
     const faltas = (countdown == 1) ? "Falta" : "Faltam";
-    const color = (cores.filter( cor => (cor.dia == dia)))[0];
-    const cor = color.cor;
 
     return (countdown > 0) ? (
         <div>
@@ -27,11 +26,9 @@ export default function Music() {
         </div>
     ) : (
         <div className="bg-white flex flex-col items-center w-full gap-16 mt-8">
-            <h1 style={{color: cor }} className={`font-work-sans text-6xl`}> Músicas </h1>
+            <h1 style={{color: "#3a90bc" }} className={`font-work-sans text-6xl`}> Músicas </h1>
             <div className="flex flex-row gap-16 flex-wrap w-[80%] md:w-[50%] justify-evenly items-start">
-                {musicas.map((m,index) => (
-                    <Musica key={index} music={m}/>
-                ))}
+                <Musica music={m}/>
             </div>
         </div>
     );

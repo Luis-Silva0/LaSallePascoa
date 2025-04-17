@@ -35,22 +35,18 @@ export default function Home() {
   const images = require.context('/public/images', true);
   const imageList = images.keys().map(image => images(image));
   const date = new Date();
-  const day = date.getUTCDate();
-  const dia = date.getUTCDay();
-  const countdown = 28 - day;
+  const day = date.getDate();
+  const countdown = 17 - day;
   const dias = (countdown == 1) ? "dia" : "dias";
   const faltas = (countdown == 1) ? "Falta" : "Faltam";
-  const cartaz = cartazes.filter( cartaz => (cartaz.dia == dia));
-  const post = cartaz[0];
-  console.log(post)
 
   return (
     <main className="bg-white flex flex-col gap-0 w-full overflow-hidden md:oveflow-auto h-[75vh] md:h-auto items-center">
       {(countdown <= 0) ?
         <div className="bg-[#f7f7f7] w-full flex grow h-[100%] md:h-auto">
-          <div style={{backgroundImage: `url(${post.cartaz})`}}className="md:hidden flex grow items-center relative bg-cover overflow-visible bg-no-repeat bg-center"></div>
+          <div style={{backgroundImage: `url(/Pascoa25.jpg)`}}className="md:hidden flex grow items-center relative bg-cover overflow-visible bg-no-repeat bg-center"></div>
           <div className="md:flex hidden grow items-center relative overflow-visible">
-            <Image src={post.cartaz} sizes="100vw" height={0} width={0} className="hidden md:flex w-full h-auto"/>
+            <Image src="/Pascoa25.jpg" sizes="100vw" height={0} width={0} className="hidden md:flex w-full h-auto"/>
           </div>
         </div>
         :
